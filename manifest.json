@@ -23,10 +23,10 @@
             "type": "image/png"
         }
     ],
-    "id": "/groceryapp-javascript-dexiejs-pwa",
-    "start_url": "/groceryapp-javascript-dexiejs-pwa",
+    "id": "/groceryapp-javascript-dexiejs-pwa/",
+    "start_url": "/groceryapp-javascript-dexiejs-pwa/",
     "background_color": "#222",
     "display": "standalone",
-    "scope": "/",
+    "scope": "/groceryapp-javascript-dexiejs-pwa/",
     "theme_color": "#c3042f"
   }
