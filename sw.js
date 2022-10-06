@@ -1,9 +1,8 @@
 const web_cache = 'web-app-cache-v1.0';
 const filesToCache = [
-  '/',
   'index.html',
-  './css/style.css',
-  './main.js'
+  'css/style.css',
+  'main.js'
 ];
 
 self.addEventListener('install',(event)=> {
