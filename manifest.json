@@ -23,7 +23,8 @@
             "type": "image/png"
         }
     ],
-    "start_url": "/",
+    "id": "/groceryapp-javascript-dexiejs-pwa",
+    "start_url": "/groceryapp-javascript-dexiejs-pwa",
     "background_color": "#222",
     "display": "standalone",
     "scope": "/",
