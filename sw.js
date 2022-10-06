@@ -1,5 +1,6 @@
-const web_cache = 'grocery-app-v1.0';
+const web_cache = 'grocery-app-v1.1';
 const filesToCache = [
+  '/',
   'index.html',
   'css/style.css',
   'main.js'
