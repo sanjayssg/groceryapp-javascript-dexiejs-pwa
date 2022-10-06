@@ -1,24 +1,34 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Grocery App</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="A Progressive shopping app with HTML CSS AND JAVASCRIPT">
-        <link rel="stylesheet" href="css/animate.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="dexie.min.js"></script>
-        
-    </head>
-    <body>
-        <header>
-            <h1 class="heading animate__animated animate__bounceInRight">
-                Shopping Made Easy With Grocery App
-            </h1>
-            <p class="paragraph">Grocery App helps you to organize and priotize your list and keep them on track ✔✔✔</p>
-        </header>
-        <!--=========== Add item input section ============= -->
-        <main class="main-section" id="">
+
+<head>
+    <title>Grocery App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A Progressive shopping app with HTML CSS AND JAVASCRIPT">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="dexie.min.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load',()=> {
+            navigator.serviceWorker.register("sw.js").then(() => {
+              console.log("[ServiceWorker**] - Registered"); });
+        });
+      }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1 class="heading animate__animated animate__bounceInRight">
+            Shopping Made Easy With Grocery App
+        </h1>
+        <p class="paragraph">Grocery App helps you to organize and priotize your list and keep them on track ✔✔✔</p>
+    </header>
+    <!--=========== Add item input section ============= -->
+    <main class="main-section" id="">
 
         <section class="item-section">
             <!--=========== Add item input section ============= -->
@@ -43,32 +53,33 @@
                         List</button>
                 </form>
             </div>
-        <!--=========== Add item input section end here ============= -->
-        <!--=========== Delete section ============= -->
-        <section>
+            <!--=========== Add item input section end here ============= -->
+            <!--=========== Delete section ============= -->
+            <section>
 
-            <div class="itemContainer">
-                <!-- new item section -->
-                <div id="newItemsDiv"></div>
-                <!-- delete all items -->
-                <div class="deleteItemConatiner">
-                    <button id="deleteAllBtn" onclick="deleteAllItems()">
-                        Delete all Items
-                    </button>
+                <div class="itemContainer">
+                    <!-- new item section -->
+                    <div id="newItemsDiv"></div>
+                    <!-- delete all items -->
+                    <div class="deleteItemConatiner">
+                        <button id="deleteAllBtn" onclick="deleteAllItems()">
+                            Delete all Items
+                        </button>
+                    </div>
+
                 </div>
-
+            </section>
             </div>
+            <!--=========== Delete section end here ============= -->
+            <!--=========== Total Price ============= -->
+            <section class="totalPriceSection">
+                <div id="totalPriceDiv"></div>
+            </section>
+            <!--=========== Total Price end here ============= -->
+
+            <script src="main.js"></script>
         </section>
-        </div>
-        <!--=========== Delete section end here ============= -->
-        <!--=========== Total Price ============= -->
-        <section class="totalPriceSection">
-            <div id="totalPriceDiv"></div>
-        </section>
-        <!--=========== Total Price end here ============= -->
-        
-        <script src="main.js"></script>
-     </section>
-     </main>   
-    </body>
+    </main>
+</body>
+
 </html>
