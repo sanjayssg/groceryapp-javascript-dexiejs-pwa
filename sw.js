@@ -1,4 +1,4 @@
-const web_cache = 'web-app-cache-v1.0';
+const web_cache = 'grocery-app-v1.0';
 const filesToCache = [
   'index.html',
   'css/style.css',
@@ -19,7 +19,7 @@ self.addEventListener("activate", event => {
   caches.keys().then(keyList => {
     return Promise.all(
       keyList.map(key => {
-        if (key !== cacheName) {
+        if (key !== web_cache) {
           console.log("[ServiceWorker] - Removing old cache", key);
           return caches.delete(key);
         }
