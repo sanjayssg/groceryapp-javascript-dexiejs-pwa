@@ -122,7 +122,7 @@ header {
 }
 
 .item {
-  width: 60rem;
+  /* width: 60rem; */
   margin: 20px auto 0 .5rem;
   padding: 0px 10px;
   min-height: 2.8rem;
