@@ -41,7 +41,7 @@ itemInput.onsubmit = async (event) => {
         />
         <div class="itemInfo">
           <p>${item.name}</p>
-          <p>$${item.price} x ${item.quantity}</p>
+          <p>₹${item.price} x ${item.quantity}</p>
         </div>
         ${!item.isPurchased ? `<div class="itemChange">
         <button onclick="deleteItem(${item.id})" class="deleteButton">
